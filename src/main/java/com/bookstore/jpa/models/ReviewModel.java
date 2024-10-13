@@ -1,4 +1,4 @@
-package com.bookstroe.jpa.models;
+package com.bookstore.jpa.models;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "TB_REVIL")
 
-public class RevilModel implements Serializable {
+public class ReviewModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -28,7 +28,7 @@ public class RevilModel implements Serializable {
     @JoinColumn(name = "book_id")
     private BookModel book;
 
-    public RevilModel() {
+    public ReviewModel() {
         this.id = UUID.randomUUID(); // VAI GERAR OS IDS
     }
 

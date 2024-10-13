@@ -1,4 +1,4 @@
-package com.bookstroe.jpa.models;
+package com.bookstore.jpa.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

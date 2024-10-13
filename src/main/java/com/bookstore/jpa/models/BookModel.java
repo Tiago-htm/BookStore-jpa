@@ -1,4 +1,4 @@
-package com.bookstroe.jpa.models;
+package com.bookstore.jpa.models;
 
 import java.io.Serializable;
 
@@ -41,7 +41,7 @@ public class BookModel implements Serializable {
     private Set<AuthorModel> authors = new HashSet<>();
 
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL) // cascada para pegar todos os review vinculados ao book
-    private RevilModel review;
+    private ReviewModel review;
 
     public BookModel() {
         this.id = UUID.randomUUID(); // VAI GERAR OS IDS
@@ -79,11 +79,11 @@ public class BookModel implements Serializable {
         this.authors = authors;
     }
 
-    public RevilModel getReview() {
+    public ReviewModel getReview() {
         return review;
     }
 
-    public void setReview(RevilModel review) {
+    public void setReview(ReviewModel review) {
         this.review = review;
     }
 
